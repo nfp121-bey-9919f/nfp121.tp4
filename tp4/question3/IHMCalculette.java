@@ -15,7 +15,7 @@ public class IHMCalculette extends JFrame {
         Vue vue = new Vue(modele);
 
         setLayout(new GridLayout(2, 1));
-        add(vue);
+        add(vue);;
         add(controle);
         pack();
         setLocation(200,200);

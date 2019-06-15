@@ -1,5 +1,6 @@
 #BlueJ class context
 comment0.target=IHMCalculetteTest
+comment0.text=\r\n\ Test\ la\ classe\ {@see\ question3.IHMCalculette}.\r\n
 comment1.params=
 comment1.target=void\ setUp()
 comment1.text=\r\n\ Met\ en\ place\ les\ engagements.\r\n\r\n\ M\u00E9thode\ appel\u00E9e\ avant\ chaque\ appel\ de\ m\u00E9thode\ de\ test.\r\n

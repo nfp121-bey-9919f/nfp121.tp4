@@ -1,6 +1,10 @@
 #BlueJ class context
-comment0.params=pile
-comment0.target=Vue(PileModele)
-comment1.params=obs\ arg
-comment1.target=void\ update(java.util.Observable,\ java.lang.Object)
-numComments=2
+comment0.target=Vue
+comment0.text=\r\n\ Repr\u00E9sente\ la\ vue\ dans\ une\ impl\u00E9mentation\ MVC\ d'une\ calculette\ \u00E0\ pile.\r\n\ \r\n\ @author\ Fabien\ PERRONNET\r\n\ @version\ 1.0.0\r\n
+comment1.params=pile
+comment1.target=Vue(PileModele)
+comment1.text=\r\n\ Cr\u00E9e\ une\ nouvelle\ instance\ de\ {@see\ question3.Vue}\r\n\ \r\n\ @param\ pile\ Mod\u00E8le\ auquel\ la\ vue\ est\ rattach\u00E9e.\r\n
+comment2.params=obs\ arg
+comment2.target=void\ update(java.util.Observable,\ java.lang.Object)
+comment2.text=\r\n\ Met\ \u00E0\ jour\ la\ vue\ suite\ \u00E0\ une\ \u00E9mission\ du\ mod\u00E8le.\r\n
+numComments=3

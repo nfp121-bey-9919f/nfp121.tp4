@@ -8,16 +8,20 @@ import java.util.Observable;
 import java.util.Observer;
 
 /**
- * DÃ©crivez votre classe Controleur ici.
+ * Représente la vue dans une implémentation MVC d'une calculette à pile.
  * 
- * @author (votre nom)
- * @version (un numÃ©ro de version ou une date)
+ * @author Fabien PERRONNET
+ * @version 1.0.0
  */
-public class Vue extends JPanel {// Ã  complÃ©ter
-
+public class Vue extends JPanel implements Observer {
     private JLabel etatPile;
     private PileModele<Integer> pile;
 
+    /**
+     * Crée une nouvelle instance de {@see question3.Vue}
+     * 
+     * @param pile Modèle auquel la vue est rattachée.
+     */
     public Vue(PileModele<Integer> pile) {
         super();
         this.pile = pile;
@@ -25,11 +29,14 @@ public class Vue extends JPanel {// Ã  complÃ©ter
         setLayout(new FlowLayout(FlowLayout.LEFT));
         add(etatPile);
         setBackground(Color.green);
-        // inscription auprÃ¨s du modÃ¨le comme observateur
+        // inscription auprès du modèle comme observateur
+        pile.addObserver(this);
     }
 
+    /**
+     * Met à jour la vue suite à une émission du modèle.
+     */
     public void update(Observable obs, Object arg) {
-        etatPile.setText(pile.toString()); // ou obs.toString()
+        etatPile.setText(pile.toString());
     }
-
 }

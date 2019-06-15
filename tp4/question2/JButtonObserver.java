@@ -1,27 +1,24 @@
 package question2;
 
-//import java.awt.event. // à compléter
-//import java.awt.event. // à compléter
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
 import java.awt.TextArea;
 
 /**
- * Décrivez votre classe JButtonObserver ici.
+ * Observe les clics d'un bouton.
  * 
- * @author (votre nom)
- * @version (un numéro de version ou une date)
+ * @author Fabien PERRONNET
+ * @version 1.0.0
  */
-public class JButtonObserver { // à compléter
-
+public class JButtonObserver implements ActionListener {
     private String nom;
     private TextArea contenu;
 
     /**
-     * Constructeur d'objets de classe JButtonObserver
+     * Cr�e une nouvelle instance de {@see question2.JButtonObserver}.
      * 
-     * @param nom
-     *            le nom du bouton, jbo1, jbo2, jbo3, jmo1, jmo2, jmo3
-     * @param contenu
-     *            la zone de texte de l'applette
+     * @param nom Nom du bouton.
+     * @param contenu Zone de texte dans laquelle sera ajout� le message au clic du bouton.
      */
     public JButtonObserver(String nom, TextArea contenu) {
         this.nom = nom;
@@ -29,17 +26,13 @@ public class JButtonObserver { // à compléter
     }
 
     /**
-     * affichage d'un message dans la zone de texte ce message est de la forme
-     * observateur this.nom : clic du bouton nom_du_bouton exemple : observateur
-     * jbo1 : clic du bouton A, voir la méthode getActionCommand()
+     * Ev�nement d�clench� lorsqu'un bouton notifie un clic.
+     * Affiche un message texte dans la zone de contenu.
      * 
-     * @param à
-     *            compléter
+     * @param evt Ev�nement transmis.
      */
-    public void action________/* à compléter */(/* à compléter */) {
-        String message = ""; // à compléter, inspirez-vous de l'applette de l'énoncé
+    public void actionPerformed(ActionEvent evt) {
+        String message = "observateur " + nom + " : clic du bouton " + evt.getActionCommand(); 
         contenu.append(message + "\n");
     }
-
 }
-
